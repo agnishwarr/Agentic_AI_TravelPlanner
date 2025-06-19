@@ -84,9 +84,9 @@ agentic_travel_ai/
 
 ## Limitations (Current Version)
 
-* ❌ No OpenAI-based planning without valid `OPENAI_API_KEY`
-* ❌ No embedded maps or PDF download
-* ✅ Email functionality works 100% for free with Gmail App Passwords
+*  No OpenAI-based planning without valid `OPENAI_API_KEY`
+*  No embedded maps or PDF download
+*  Email functionality works 100% for free with Gmail App Passwords
 
 ---
 
@@ -117,5 +117,5 @@ MIT License — use freely, modify, and share.
 
 ---
 
-Let me know if you’d like a markdown badge row (Python 🐍, Streamlit 🚀, MIT 📜), or if you're deploying it publicly and want deployment instructions (e.g., on Streamlit Cloud or Hugging Face Spaces).
+Let me know if you’d like a markdown badge row (Python , Streamlit , MIT ), or if you're deploying it publicly and want deployment instructions (e.g., on Streamlit Cloud or Hugging Face Spaces).
 ```
