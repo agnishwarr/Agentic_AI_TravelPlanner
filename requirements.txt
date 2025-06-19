@@ -1,0 +1,6 @@
+streamlit
+langchain
+openai
+jinja2
+python-dotenv
+pdfkit
