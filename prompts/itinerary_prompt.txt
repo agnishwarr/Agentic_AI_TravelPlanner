@@ -1,0 +1,2 @@
+Create a detailed day-wise travel itinerary for a {{days}}-day trip to {{destination}}.
+Include activities, local food, cultural tips, and famous places to visit each day.
