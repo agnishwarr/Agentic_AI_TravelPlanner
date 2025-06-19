@@ -6,7 +6,7 @@ from agent.map_embedder import generate_map_embed_url
 
 st.set_page_config(page_title="Agentic AI Travel Planner", layout="centered")
 
-st.title("🌍 Agentic AI Travel Itinerary Planner")
+st.title("Agentic AI Travel Itinerary Planner")
 
 with st.form("trip_form"):
     destination = st.text_input("Where do you want to go?")
@@ -18,25 +18,18 @@ if submitted:
     if destination and days:
         with st.spinner("Planning your adventure..."):
             itinerary = generate_itinerary(destination, days)
-
             st.success("Here is your itinerary:")
             st.text_area("Travel Itinerary", itinerary, height=400)
-
-            # Show Map
-            st.subheader("🗺️ Destination Map")
+            st.subheader("Destination Map")
             map_url = generate_map_embed_url(destination)
             st.components.v1.iframe(map_url, height=300)
-
-            # Generate PDF
             pdf_file = generate_pdf(itinerary, destination)
             with open(pdf_file, "rb") as f:
-                st.download_button("📄 Download Itinerary PDF", f, file_name=pdf_file, mime="application/pdf")
-
-            # Send Email
+                st.download_button("Download Itinerary PDF", f, file_name=pdf_file, mime="application/pdf")
             if user_email:
                 try:
                     send_email(user_email, f"{destination} Travel Plan", itinerary)
-                    st.success(f"📧 Itinerary sent to {user_email}")
+                    st.success(f"Itinerary sent to {user_email}")
                 except Exception as e:
                     st.error(f"Error sending email: {e}")
     else:
